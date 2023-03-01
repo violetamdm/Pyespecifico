@@ -3,6 +3,13 @@ import logging
 import requests
 
 """
+HTTP Request -> Petición (existe)
+HTTP Response -> Respuesta
+"""
+
+#LOGGING:
+
+"""
 Objetos:
 Logger es un registrador:
 "logger" -> Registrador
@@ -19,7 +26,6 @@ ERROR:  40 -> error
 CRITICAL:  50 -> critical
 FATAL:  50 -> fatal      ### FATAL == CRITICAL & fatal == critical ###
 """
-
 
 # Print cada nivel (Es como un Enum):
 print("NIVELES:"
@@ -63,6 +69,27 @@ logger2.fatal("logger 2 -> FATAL")
 
 
 # HANDLER:
+"""
+https://es.stackoverflow.com/questions/173853/qu%C3%A9-es-un-handler
+Es un manejador: 
+    Recibe un evento, un mensaje, etc y actúa en función al mismo.
+
+Ejemplo logeo de información:
+
+    Logger: objeto que define múltiples mensajes a "logear" durante la 
+    ejecución de nuestros scripts.
+
+    Cuando necesitamos registrar un mensaje, usaremos cualquiera de las rutinas
+    del objeto, por ej: warning(), error(), log() etc. Todas ellas terminan 
+    invocando a una función interna _log().
+
+    _log(): construye el "registro" que deseamos guardar y por último 
+    invoca al método callHandlers().  
+    
+    callHandlers(): itera lista de Handlers configurada previamente 
+    e invoca para cada una de las instancias de los mismos, el metódo 
+    handle().
+"""
 
 # Crear Handler:
 manejador = logging.Handler(level = 1)
@@ -89,13 +116,7 @@ logger2.debug("hgf")
 logging.captureWarnings(True)
 
 sesion = requests.Session()
+sesion.request()
 print(sesion)
-
-class coche(int):
-    x = 0
-    def funcion():
-        x = int
-        return True
-
-class citroen(int):
-    super().function()
+requests.Request()
+requests.Response()
