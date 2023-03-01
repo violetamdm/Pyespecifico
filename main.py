@@ -1,6 +1,6 @@
 #IMPORTS:
 import logging
-
+import requests
 
 """
 Objetos:
@@ -83,6 +83,19 @@ logger2.addHandler(manejador)
 logger2.warning("filtro warning")
 logger2.warning("filtro2 warning")
 logger2.debug("hgf")
+
 #Extras:
 #logging.LoggerAdapter()
 logging.captureWarnings(True)
+
+sesion = requests.Session()
+print(sesion)
+
+class coche(int):
+    x = 0
+    def funcion():
+        x = int
+        return True
+
+class citroen(int):
+    super().function()
