@@ -2,7 +2,6 @@ import sys
 from PyQt5.QtWidgets import QMainWindow, Q , QLabel, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
-from client import send_code
 
 class App(QMainWindow):
  
